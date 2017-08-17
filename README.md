@@ -5,7 +5,7 @@
 
 > ![](https://github.com/ZYiDa/ZLCollectionView/raw/master/QQ20170817-152627.gif) 
 
-> [这是我的简书地址](http://www.jianshu.com/u/cd395981b31d "谢谢访问") 
+> [这是我的简书地址](http://www.jianshu.com/u/cd395981b31d "谢谢访问") ，欢迎各位关注，我会不定期更新的。
 
 > 你可以导入```#import "ZLCollectionView.h"```,然后通过下面的方式来使用。
 
