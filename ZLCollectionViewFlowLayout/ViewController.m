@@ -19,6 +19,9 @@
     [super viewDidLoad];
 
     ZLCollectionView *collectionView = [ZLCollectionView collectionViewWithFrame:CGRectMake(0, 0, [UIScreen mainScreen].bounds.size.width, [UIScreen mainScreen].bounds.size.height) itemCount:30];
+    [collectionView didSelectedItemsWithBlock:^(NSIndexPath *indexPath) {
+        NSLog(@"ItemTag:%ld",indexPath.item);
+    }];
     [self.view addSubview:collectionView];
 }
 

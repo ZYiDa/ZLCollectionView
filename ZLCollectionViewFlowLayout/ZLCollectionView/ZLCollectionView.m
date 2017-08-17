@@ -84,6 +84,16 @@ static NSString * identifier = @"collecitonView_cell";
     return cell;
 }
 
+- (void)collectionView:(UICollectionView *)collectionView didSelectItemAtIndexPath:(NSIndexPath *)indexPath
+{
+    self.selectedItems(indexPath);
+}
+
+- (void)didSelectedItemsWithBlock:(DidSelectedItems)selectedItems
+{
+    self.selectedItems = selectedItems;
+}
+
 /*
 // Only override drawRect: if you perform custom drawing.
 // An empty implementation adversely affects performance during animation.
