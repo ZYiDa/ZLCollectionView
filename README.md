@@ -11,7 +11,10 @@
 
 ```
 ZLCollectionView *collectionView = [ZLCollectionView collectionViewWithFrame:CGRectMake(0, 0, [UIScreen mainScreen].bounds.size.width, [UIScreen mainScreen].bounds.size.height) itemCount:30];
-[self.view addSubview:collectionView]
+[collectionView didSelectedItemsWithBlock:^(NSIndexPath *indexPath) {
+    NSLog(@"ItemTag:%ld",indexPath.item);
+}];
+[self.view addSubview:collectionView];
 ```
 
 > 你还可以根据自己的需求来修改样式，代码的不足之处，还请各位多多指教，
