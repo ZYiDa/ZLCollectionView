@@ -17,6 +17,8 @@
 		061C7D5C1F454212009195FE /* ZLCollectionViewFlowLayoutUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 061C7D5B1F454212009195FE /* ZLCollectionViewFlowLayoutUITests.m */; };
 		061C7D7A1F457D07009195FE /* ZLCollectionView.m in Sources */ = {isa = PBXBuildFile; fileRef = 061C7D761F457D07009195FE /* ZLCollectionView.m */; };
 		061C7D7B1F457D07009195FE /* ZLFlowLayout.m in Sources */ = {isa = PBXBuildFile; fileRef = 061C7D781F457D07009195FE /* ZLFlowLayout.m */; };
+		0670035F1FC7FF1300574B7E /* CustomCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 0670035E1FC7FF1300574B7E /* CustomCollectionViewCell.m */; };
+		41787D78DCAEA27ED9497A2E /* Pods_ZLCollectionViewFlowLayout.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DF36CD1FCB087F3B5F61143A /* Pods_ZLCollectionViewFlowLayout.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -58,6 +60,11 @@
 		061C7D771F457D07009195FE /* ZLFlowLayout.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZLFlowLayout.h; sourceTree = "<group>"; };
 		061C7D781F457D07009195FE /* ZLFlowLayout.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZLFlowLayout.m; sourceTree = "<group>"; };
 		061C7D791F457D07009195FE /* ZLFlowLayoutConstants.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZLFlowLayoutConstants.h; sourceTree = "<group>"; };
+		0670035D1FC7FF1300574B7E /* CustomCollectionViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CustomCollectionViewCell.h; sourceTree = "<group>"; };
+		0670035E1FC7FF1300574B7E /* CustomCollectionViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CustomCollectionViewCell.m; sourceTree = "<group>"; };
+		DF36CD1FCB087F3B5F61143A /* Pods_ZLCollectionViewFlowLayout.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ZLCollectionViewFlowLayout.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		EE1322A61C665F76CC159033 /* Pods-ZLCollectionViewFlowLayout.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ZLCollectionViewFlowLayout.debug.xcconfig"; path = "Pods/Target Support Files/Pods-ZLCollectionViewFlowLayout/Pods-ZLCollectionViewFlowLayout.debug.xcconfig"; sourceTree = "<group>"; };
+		F8981423BF3DA1269627D32C /* Pods-ZLCollectionViewFlowLayout.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ZLCollectionViewFlowLayout.release.xcconfig"; path = "Pods/Target Support Files/Pods-ZLCollectionViewFlowLayout/Pods-ZLCollectionViewFlowLayout.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -65,6 +72,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				41787D78DCAEA27ED9497A2E /* Pods_ZLCollectionViewFlowLayout.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -92,6 +100,8 @@
 				061C7D4F1F454212009195FE /* ZLCollectionViewFlowLayoutTests */,
 				061C7D5A1F454212009195FE /* ZLCollectionViewFlowLayoutUITests */,
 				061C7D341F454212009195FE /* Products */,
+				1D5F72B2A5EDBB01E324F788 /* Pods */,
+				E186F7B1C35B06C73F69E4B0 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -151,6 +161,8 @@
 		061C7D741F457D07009195FE /* ZLCollectionView */ = {
 			isa = PBXGroup;
 			children = (
+				0670035D1FC7FF1300574B7E /* CustomCollectionViewCell.h */,
+				0670035E1FC7FF1300574B7E /* CustomCollectionViewCell.m */,
 				061C7D751F457D07009195FE /* ZLCollectionView.h */,
 				061C7D761F457D07009195FE /* ZLCollectionView.m */,
 				061C7D771F457D07009195FE /* ZLFlowLayout.h */,
@@ -160,6 +172,23 @@
 			path = ZLCollectionView;
 			sourceTree = "<group>";
 		};
+		1D5F72B2A5EDBB01E324F788 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				EE1322A61C665F76CC159033 /* Pods-ZLCollectionViewFlowLayout.debug.xcconfig */,
+				F8981423BF3DA1269627D32C /* Pods-ZLCollectionViewFlowLayout.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		E186F7B1C35B06C73F69E4B0 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				DF36CD1FCB087F3B5F61143A /* Pods_ZLCollectionViewFlowLayout.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -167,9 +196,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 061C7D601F454212009195FE /* Build configuration list for PBXNativeTarget "ZLCollectionViewFlowLayout" */;
 			buildPhases = (
+				E389DF6AC71F0D6C4DEF1FF3 /* [CP] Check Pods Manifest.lock */,
 				061C7D2F1F454212009195FE /* Sources */,
 				061C7D301F454212009195FE /* Frameworks */,
 				061C7D311F454212009195FE /* Resources */,
+				439C5B54973A300E4D1461E4 /* [CP] Embed Pods Frameworks */,
+				2C86BB8D7812487FA5D7285E /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -289,6 +321,60 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		2C86BB8D7812487FA5D7285E /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-ZLCollectionViewFlowLayout/Pods-ZLCollectionViewFlowLayout-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		439C5B54973A300E4D1461E4 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-ZLCollectionViewFlowLayout/Pods-ZLCollectionViewFlowLayout-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/Masonry/Masonry.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Masonry.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-ZLCollectionViewFlowLayout/Pods-ZLCollectionViewFlowLayout-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		E389DF6AC71F0D6C4DEF1FF3 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-ZLCollectionViewFlowLayout-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		061C7D2F1F454212009195FE /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
@@ -297,6 +383,7 @@
 				061C7D3E1F454212009195FE /* ViewController.m in Sources */,
 				061C7D7B1F457D07009195FE /* ZLFlowLayout.m in Sources */,
 				061C7D3B1F454212009195FE /* AppDelegate.m in Sources */,
+				0670035F1FC7FF1300574B7E /* CustomCollectionViewCell.m in Sources */,
 				061C7D7A1F457D07009195FE /* ZLCollectionView.m in Sources */,
 				061C7D381F454212009195FE /* main.m in Sources */,
 			);
@@ -445,6 +532,7 @@
 		};
 		061C7D611F454212009195FE /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = EE1322A61C665F76CC159033 /* Pods-ZLCollectionViewFlowLayout.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = XR7Z76KXL9;
@@ -458,6 +546,7 @@
 		};
 		061C7D621F454212009195FE /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = F8981423BF3DA1269627D32C /* Pods-ZLCollectionViewFlowLayout.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = XR7Z76KXL9;

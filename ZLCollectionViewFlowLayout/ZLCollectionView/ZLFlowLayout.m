@@ -17,9 +17,10 @@
     self = [super init];
     if (self)
     {
+        self.minimumLineSpacing = 15.0f;
+
         self.itemSize = CGSizeMake(SCREEN_WIDTH - LEFT_OFFSET*2, (SCREEN_WIDTH - LEFT_OFFSET*2)/0.618f);
         self.scrollDirection = UICollectionViewScrollDirectionHorizontal;//设置为水平滑动
-        self.minimumLineSpacing = 15.0f;
         self.sectionInset = UIEdgeInsetsMake(64, LEFT_OFFSET, 0, LEFT_OFFSET);
     }
     return self;
@@ -32,7 +33,10 @@
 
 - (NSArray *)layoutAttributesForElementsInRect:(CGRect)rect
 {
-    NSArray * array = [[NSArray alloc]initWithArray:[super layoutAttributesForElementsInRect:rect] copyItems:YES];
+//    NSArray * array = [[NSArray alloc]initWithArray:[super layoutAttributesForElementsInRect:rect] copyItems:YES];
+
+    NSArray * array = [super layoutAttributesForElementsInRect:rect];
+
     CGRect visiableRect;
     visiableRect.origin = self.collectionView.contentOffset;
     visiableRect.size = self.collectionView.bounds.size;
@@ -71,16 +75,5 @@
     }
     return CGPointMake(proposedContentOffset.x + offsetAdjustment, proposedContentOffset.y);
 }
-
-//- (NSArray *)deepCopyWithArray:(NSArray *)array
-//{
-//    NSMutableArray *copys = [NSMutableArray arrayWithCapacity:array.count];
-//
-//    for (UICollectionViewLayoutAttributes *attris in array)
-//    {
-//        [copys addObject:[attris copy]];
-//    }
-//    return copys;
-//}
 
 @end

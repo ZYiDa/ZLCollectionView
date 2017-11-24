@@ -8,7 +8,7 @@
 
 #import "ZLCollectionView.h"
 #import "ZLFlowLayout.h"
-
+#import "CustomCollectionViewCell.h"
 static NSString * identifier = @"collecitonView_cell";
 @interface ZLCollectionView ()<UICollectionViewDelegate,UICollectionViewDataSource>
 
@@ -53,7 +53,7 @@ static NSString * identifier = @"collecitonView_cell";
 
 
     //注册cell
-    [self.mainCollectionView registerClass:[UICollectionViewCell class]
+    [self.mainCollectionView registerClass:[CustomCollectionViewCell class]
                 forCellWithReuseIdentifier:identifier];
 }
 
@@ -65,15 +65,21 @@ static NSString * identifier = @"collecitonView_cell";
 {
     return self.itemCount;
 }
-- (__kindof UICollectionViewCell *)collectionView:(UICollectionView *)collectionView cellForItemAtIndexPath:(NSIndexPath *)indexPath
+- (__kindof CustomCollectionViewCell *)collectionView:(UICollectionView *)collectionView cellForItemAtIndexPath:(NSIndexPath *)indexPath
 {
-    UICollectionViewCell *cell = [collectionView dequeueReusableCellWithReuseIdentifier:identifier
+    CustomCollectionViewCell *cell = [collectionView dequeueReusableCellWithReuseIdentifier:identifier
                                                                            forIndexPath:indexPath];
+
+    /*这段代码的作用就是：
+     *当直接往细胞上面添加视图内容时，随着滑动，可能会出现内容重叠的问题。
+     *但是在自定义细胞时使用这段代码，就会移除细胞的所有子视图，
+     *使用Masonry给电池子视图上的内容进行约束就会崩溃，或者直接给细胞上的内容进行约束时就会出现细胞显示而上面内容不显示的问题。
     //这一步，防止cell上面的内容发生重叠
     for (UIView * view in cell.subviews)
     {
         [view removeFromSuperview];
     }
+     */
 
     cell.backgroundColor = [UIColor lightGrayColor];
     cell.layer.masksToBounds = YES;
