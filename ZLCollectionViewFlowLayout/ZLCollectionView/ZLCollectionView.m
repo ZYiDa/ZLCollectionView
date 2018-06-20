@@ -92,12 +92,16 @@ static NSString * identifier = @"collecitonView_cell";
 
 - (void)collectionView:(UICollectionView *)collectionView didSelectItemAtIndexPath:(NSIndexPath *)indexPath
 {
-    self.selectedItems(indexPath);
+    if (self.selectedItems) {
+        self.selectedItems(indexPath);
+    }
 }
 
 - (void)didSelectedItemsWithBlock:(DidSelectedItems)selectedItems
 {
-    self.selectedItems = selectedItems;
+    if (self.selectedItems) {
+        self.selectedItems = selectedItems;
+    }
 }
 
 /*
